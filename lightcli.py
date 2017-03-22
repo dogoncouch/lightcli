@@ -45,7 +45,7 @@ def get_input(options=[], prompt='Press ENTER to continue.', qopt=False):
                 choice = None
                 is_sure = input('Are you sure you want to quit? ')
                 if is_sure in ('Y', 'y', 'yes'):
-                    exit('Thanks for playing. Goodbye.\n')
+                    exit('\nThanks for playing. Goodbye.\n')
             elif options == []:
                 return 0
             else:
