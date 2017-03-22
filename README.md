@@ -9,6 +9,8 @@ Requirements: git, python-setuptools, python3-setuptools
     sudo make all
 
 # Functions
+    import lightcli
+    
     lightcli.get_input([options=<options>], [prompt=<prompt>], [qopt={True|False}])
 
 Prompts for and returns input. `` options `` is the list of acceptable answers (a list of strings). `` prompt `` is the text shown when asking for input (a string). `` qopt `` toggles a 'q to quit' option (True/False: default is False).
