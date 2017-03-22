@@ -2,11 +2,7 @@
 A lightweight terminal interaction library for Python.
 
 # Installing
-Requirements: git, python-setuptools, python3-setuptools
-
-    git clone https://github.com/dogoncouch/lightcli.git
-    cd lightcli
-    sudo make all
+See the latest instructions on the [releases page](https://github.com/dogoncouch/lightcli/releases)
 
 # Functions
     import lightcli
