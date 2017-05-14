@@ -18,9 +18,13 @@ lightcli.get_input - Python function to ask for input and check its sanity.
 .br
 Prompts for and returns input. 'options' is the list of acceptable answers (a list of strings). 'prompt' is the text shown when asking for input (a string). 'qopt' toggles a 'q to quit' option (True/False: default is False).
 
-\fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]
+\fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
 .br
 Gets a multi-line string as input. Entering an EOF (ctrl-D in *nix, ctrl-Z in Windows) on a blank line ends the input.
+
+\fBlightcli.list_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
+.br
+Gets a list of strings as input. Each item is entered on a separate line; entering an EOF (ctrl-D in *nix, ctrl-Z in Windows) on a blank line ends the input.
 
 .SH FILES
     /usr/share/doc/lightcli/README.md

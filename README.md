@@ -16,6 +16,11 @@ Prompts for and returns input. `` options `` is the list of acceptable answers (
 
 Gets a multi-line string as input. Entering an EOF (ctrl-D in \*nix, ctrl-Z in Windows) on a blank line ends the input.
 
+    mylist = lightcli.list_input([prompt=<prompt>])
+
+Gets a list of strings as input. Each item is entered on a separate line; entering an EOF (ctrl-D in \*nix, ctrl-Z in Windows) on a blank line ends the input.
+
+
 # Copyright
 MIT License
 

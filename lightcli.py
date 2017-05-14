@@ -76,3 +76,21 @@ def long_input(prompt='Multi-line input\n' + \
         pass
     finally:
         return '\n'.join(lines)
+
+
+
+def list_input(prompt='List input - enter each item on a seperate line\n' + \
+        'Enter EOF on a blank line to end ' + \
+        '(ctrl-D in *nix, ctrl-Z in windows)'):
+    """Get multi-line string input"""
+    
+    lines = []
+    print(prompt)
+
+    try:
+        while True:
+            lines.append(str(input('')))
+    except EOFError:
+        pass
+    finally:
+        return lines
