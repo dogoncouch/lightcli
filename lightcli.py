@@ -23,7 +23,7 @@
 # lightcli
 # A lightweight terminal interaction library for Python.
 
-__version__ = '0.2-alpha'
+__version__ = '0.3-alpha'
 
 
 
