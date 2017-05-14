@@ -75,5 +75,4 @@ def long_input(prompt='Multi-line input\n' + \
     except EOFError:
         pass
     finally:
-        fullinput = '\n'.join(lines)
-        return fullinput
+        return '\n'.join(lines)
