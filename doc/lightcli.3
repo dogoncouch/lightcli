@@ -3,8 +3,11 @@
 lightcli.get_input - Python function to ask for input and check its sanity.
 
 .SH SYNOPSIS
-    \fBimport lightcli
-    \fBlightcli.get_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
+\fBimport lightcli
+.br
+\fBlightcli.get_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
+.br
+\fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]
 
 
 .SH DESCRIPTION
@@ -12,7 +15,12 @@ lightcli.get_input - Python function to ask for input and check its sanity.
 
 .SH FUNCTIONS
 \fBlightcli.get_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
-    Prompts for and returns input. 'options' is the list of acceptable answers (a list of strings). 'prompt' is the text shown when asking for input (a string). 'qopt' toggles a 'q to quit' option (True/False: default is False).
+.br
+Prompts for and returns input. 'options' is the list of acceptable answers (a list of strings). 'prompt' is the text shown when asking for input (a string). 'qopt' toggles a 'q to quit' option (True/False: default is False).
+
+\fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]
+.br
+Gets a multi-line string as input. Entering an EOF (ctrl-D in *nix, ctrl-Z in Windows) on a blank line ends the input.
 
 .SH FILES
     /usr/share/doc/lightcli/README.md

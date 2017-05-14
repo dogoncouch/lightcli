@@ -7,9 +7,14 @@ See the latest instructions on the [releases page](https://github.com/dogoncouch
 # Functions
     import lightcli
     
-    lightcli.get_input([options=<options>], [prompt=<prompt>], [qopt={True|False}])
+    choice = lightcli.get_input([options=<options>], [prompt=<prompt>], [qopt={True|False}])
+
 
 Prompts for and returns input. `` options `` is the list of acceptable answers (a list of strings). `` prompt `` is the text shown when asking for input (a string). `` qopt `` toggles a 'q to quit' option (True/False: default is False).
+
+    multiline = lightcli.long_input([prompt=<prompt>])
+
+Gets a multi-line string as input. Entering an EOF (ctrl-D in \*nix, ctrl-Z in Windows) on a blank line ends the input.
 
 # Copyright
 MIT License
