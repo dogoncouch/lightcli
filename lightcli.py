@@ -27,7 +27,7 @@ __version__ = '0.3-alpha'
 
 
 
-def get_input(options=[], prompt='Press ENTER to continue.', 
+def choice_input(options=[], prompt='Press ENTER to continue.', 
         showopts=True, qopt=False):
     """Ask for input, and check its sanity. (q to quit)"""
 
@@ -37,8 +37,8 @@ def get_input(options=[], prompt='Press ENTER to continue.',
             if showopts:
                 prompt = prompt + ' ' + str(options)
             if qopt:
-                prompt = prompt + ' (q to quit) '
-            choice = str(input(prompt))
+                prompt = prompt + ' (q to quit)'
+            choice = str(input(prompt + ' '))
         except SyntaxError:
             if options == []:
                 pass
