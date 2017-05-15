@@ -1,24 +1,52 @@
 # lightcli
-A lightweight terminal interaction library for Python.
+A Python 3 module for lightweight terminal interaction
 
-# Installing
+## Index
+- [Installing](#installing)
+- [Introduction](#introduction)
+- [Functions](#functions)
+- [Copyright](#copyright)
+
+## Installing
 See the latest instructions on the [releases page](https://github.com/dogoncouch/lightcli/releases).
 
-# Functions
+# Introdutcion
+
+## Synopsis
     import lightcli
     
-    choice = lightcli.get_input([options=<options>], [prompt=<prompt>], [qopt={True|False}])
-
-
-Prompts for and returns input. `` options `` is the list of acceptable answers (a list of strings). `` prompt `` is the text shown when asking for input (a string). `` qopt `` toggles a 'q to quit' option (True/False: default is False).
-
+    choice = lightcli.choice_input([options=<options>], [prompt=<prompt>], [showopts={True|False}], [qopt={True|False}])
     multiline = lightcli.long_input([prompt=<prompt>])
-
-Gets a multi-line string as input. Entering an EOF (ctrl-D in \*nix, ctrl-Z in Windows) on a blank line ends the input.
-
     mylist = lightcli.list_input([prompt=<prompt>])
 
-Gets a list of strings as input. Each item is entered on a separate line; entering an EOF (ctrl-D in \*nix, ctrl-Z in Windows) on a blank line ends the input.
+## Description
+lightcli is a Python 3 module for lightweight terminal interaction.
+
+# Functions
+
+### choice = lightcli.choice\_input([options=\<options\>], [prompt=\<prompt\>], [showopts={True|False}], [qopt={True|False}])
+
+Options:
+- `` options `` - list of acceptable answers (list of strings)
+- `` prompt `` - text shown when asking for input (a string)
+- `` showopts `` - toggles display of options list (default is True)
+- `` qopt `` - toggles a 'q to quit' option (default is False)
+
+Prompts for and returns input from a list of choices.
+
+### multiline = lightcli.long\_input([prompt=\<prompt\>])
+
+Options:
+- `` prompt `` - text shown when asking for input (a string)
+
+Gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in \*nix, ctrl-Z in Windows).
+
+### mylist = lightcli.list\_input([prompt=\<prompt\>])
+
+Options:
+- `` prompt `` - text shown when asking for input (a string)
+
+Gets a list of strings as input. Each item is entered on a separate line; entering an EOF on a blank line ends the input (ctrl-D in \*nix, ctrl-Z in Windows).
 
 
 # Copyright
@@ -43,4 +71,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-

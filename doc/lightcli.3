@@ -3,28 +3,38 @@
 lightcli.get_input - Python function to ask for input and check its sanity.
 
 .SH SYNOPSIS
-\fBimport lightcli
-.br
-\fBlightcli.get_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
-.br
-\fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]
+    \fBimport lightcli
+    \fBlightcli.get_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
+    \fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]
 
 
 .SH DESCRIPTION
-\fBlightcli\fP is a lightweight terminal interaction library for Python.
+\fBlightcli\fP is a Python 3 module for lightweight terminal interaction.
 
 .SH FUNCTIONS
 \fBlightcli.get_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
 .br
-Prompts for and returns input. 'options' is the list of acceptable answers (a list of strings). 'prompt' is the text shown when asking for input (a string). 'qopt' toggles a 'q to quit' option (True/False: default is False).
+Options:
+    \fBoptions\fR - list of acceptable answers (list of strings)
+    \fBprompt\fR - text shown when asking for input (a string)
+    \fBshowopts\fR - toggles display of options list (default is True).
+    \fBqopt\fR - toggles a 'q to quit' option (default is False).
+
+Prompts for and returns input.
 
 \fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
 .br
-Gets a multi-line string as input. Entering an EOF (ctrl-D in *nix, ctrl-Z in Windows) on a blank line ends the input.
+Options:
+    \fBprompt\fR - text shown when asking for input (a string)
+
+Gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
 
 \fBlightcli.list_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
 .br
-Gets a list of strings as input. Each item is entered on a separate line; entering an EOF (ctrl-D in *nix, ctrl-Z in Windows) on a blank line ends the input.
+Options:
+    \fBprompt\fR - text shown when asking for input (a string)
+
+Gets a list of strings as input. Each item is entered on a separate line; entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
 
 .SH FILES
     /usr/share/doc/lightcli/README.md
