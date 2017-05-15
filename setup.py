@@ -1,20 +1,27 @@
 #!/usr/bin/env python3
 
-#_    Copyright (C) 2017 Dan Persons (dpersonsdev@gmail.com)
+#_MIT License
 #_
-#_    This library is free software; you can redistribute it and/or
-#_    modify it under the terms of the GNU Library General Public
-#_    License as published by the Free Software Foundation; either
-#_    version 2 of the License, or (at your option) any later version.
+#_Copyright (c) 2017 Dan Persons (dpersonsdev@gmail.com)
 #_
-#_    This library is distributed in the hope that it will be useful,
-#_    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#_    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#_    Library General Public License for more details.
+#_Permission is hereby granted, free of charge, to any person obtaining a copy
+#_of this software and associated documentation files (the "Software"), to deal
+#_in the Software without restriction, including without limitation the rights
+#_to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#_copies of the Software, and to permit persons to whom the Software is
+#_furnished to do so, subject to the following conditions:
 #_
-#_    You should have received a copy of the GNU Library General Public
-#_    License along with this library; if not, write to the Free Software
-#_    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+#_The above copyright notice and this permission notice shall be included in all
+#_copies or substantial portions of the Software.
+#_
+#_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#_IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#_FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#_AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#_LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#_OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#_SOFTWARE.
+
 
 from setuptools import setup
 from os.path import join
@@ -28,6 +35,7 @@ setup(name = 'lightcli', version = str(__version__),
         description = 'A lightweight terminal interaction library for Python',
         long_description = open('README.md').read(),
         author = 'Dan Persons', author_email = 'dpersonsdev@gmail.com',
+        url = 'https://github.com/dogoncouch/lightcli',
         py_modules = ['lightcli'],
         data_files = ourdata,
         classifiers = ["Development Status :: 3 :: Alpha",
