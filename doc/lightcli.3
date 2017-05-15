@@ -20,21 +20,21 @@ Options:
     \fBshowopts\fR - toggles display of options list (default is True).
     \fBqopt\fR - toggles a 'q to quit' option (default is False).
 
-Prompts for and returns input.
+\fBchoicec_input\fR prompts for and returns input from a list of choices.
 
 \fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
 .br
 Options:
     \fBprompt\fR - text shown when asking for input (a string)
 
-Gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
+\fBlong_input\fR gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
 
 \fBlightcli.list_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
 .br
 Options:
     \fBprompt\fR - text shown when asking for input (a string)
 
-Gets a list of strings as input. Each item is entered on a separate line; entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
+\fBlist_input\fR gets a list of strings as input. Each item is entered on a separate line; entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
 
 .SH FILES
     /usr/share/doc/lightcli/README.md
