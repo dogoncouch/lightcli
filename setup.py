@@ -58,9 +58,12 @@ ourdata = [(join(prefix, 'share/man/man3'), ['doc/lightcli.3']),
 
 setup(name = 'lightcli', version = str(__version__),
         description = 'A lightweight terminal interaction library for Python',
-        long_description = open('README.md').read(),
+        long_description = __doc__,
         author = 'Dan Persons', author_email = 'dpersonsdev@gmail.com',
         url = 'https://github.com/dogoncouch/lightcli',
+        keywords = ['python-library', 'python3-library', 'input',
+            'input-method', 'python-module', 'python3-module', 'cli',
+            'cli-utilities', 'input-validation']
         py_modules = ['lightcli'],
         data_files = ourdata,
         classifiers = ["Development Status :: 3 :: Alpha",
