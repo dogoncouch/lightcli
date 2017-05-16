@@ -130,6 +130,11 @@ def outfile_input(extension=None):
                 except IOError:
                     print('Write permission denied on ' + filename + \
                             '. Try again.')
+                except PermissionError:
+                    print('Write permission denied on ' + filename + \
+                            '. Try again.')
+                except FileNotFoundError:
+                    print(filename + ': directory not found. Try again.')
 
         else:
             choice = choice_input(
@@ -144,5 +149,10 @@ def outfile_input(extension=None):
                 except IOError:
                     print('Write permission denied on ' + filename + \
                             '. Try again.')
+                except PermissionError:
+                    print('Write permission denied on ' + filename + \
+                            '. Try again.')
+                except FileNotFoundError:
+                    print(filename + ': directory not found. Try again.')
 
     return filename
