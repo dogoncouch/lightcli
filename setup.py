@@ -22,6 +22,31 @@
 #_OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #_SOFTWARE.
 
+"""
+Lightcli
+--------
+
+Lightcli is a Python 3 module for lightweight terminal interaction.
+
+Synopsis
+````````
+
+::
+
+    import lightcli
+    
+    choice = lightcli.choice_input([options=<options>], [prompt=<prompt>], [showopts={True|False}], [qopt={True|False}])
+    multiline = lightcli.long_input([prompt=<prompt>])
+    mylist = lightcli.list_input([prompt=<prompt>])
+
+
+Links
+`````
+
+* `Documentation <https://github.com/dogoncouch/lightcli/blob/master/README.md>`_
+* `Releases <https://github.com/dogoncouch/lightcli/releases/>`_
+* `Changelog <https://github.com/dogoncouch/lightcli/blob/master/CHANGELOG.md>`_
+"""
 
 from setuptools import setup
 from os.path import join
