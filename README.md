@@ -10,6 +10,7 @@ A Python 3 module for lightweight terminal interaction
 ## Installing
 See the latest instructions on the [releases page](https://github.com/dogoncouch/lightcli/releases).
 
+
 # Introdutcion
 
 ## Synopsis
@@ -22,9 +23,10 @@ See the latest instructions on the [releases page](https://github.com/dogoncouch
 ## Description
 lightcli is a Python 3 module for lightweight terminal interaction.
 
+
 # Functions
 
-### choice = lightcli.choice\_input([options=\<options\>], [prompt=\<prompt\>], [showopts={True|False}], [qopt={True|False}])
+### lightcli.choice\_input([options=\<options\>], [prompt=\<prompt\>], [showopts={True|False}], [qopt={True|False}])
 
 Options:
 - `` options `` - list of acceptable answers (list of strings)
@@ -34,14 +36,14 @@ Options:
 
 Prompts for and returns input from a list of choices.
 
-### multiline = lightcli.long\_input([prompt=\<prompt\>])
+### lightcli.long\_input([prompt=\<prompt\>])
 
 Options:
 - `` prompt `` - text shown when asking for input (a string)
 
 Gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in \*nix, ctrl-Z in Windows).
 
-### mylist = lightcli.list\_input([prompt=\<prompt\>])
+### lightcli.list\_input([prompt=\<prompt\>])
 
 Options:
 - `` prompt `` - text shown when asking for input (a string)
