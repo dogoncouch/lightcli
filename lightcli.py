@@ -23,6 +23,10 @@
 # lightcli
 # A lightweight terminal interaction library for Python.
 
+
+import os
+import time
+
 __version__ = '0.3-alpha'
 
 
@@ -98,3 +102,47 @@ def list_input(prompt='List input - enter each item on a seperate line\n' + \
         pass
     finally:
         return lines
+
+
+def outfile_input(extension=None, quitopt=False):
+    """Get an output file name as input"""
+    
+    fileok = False
+    
+    while not fileok:
+        filename = str(input('File name? '))
+        if extension:
+            if not filename.endswith(extension):
+                if extension.startswith('.'):
+                    filename = filename + extension
+                else:
+                    filename = filename + '.' + extension
+        if os.path.isfile(filename):
+            choice = choice_input(prompt=filename + \
+                    ' already exists. Overwrite?',
+                    options=['y', 'n'], qopt=quitopt)
+            if choice == 'y':
+                try:
+                    nowtime = time.time()
+                    with open(filename, 'a') as f:
+                        os.utime(filename, (nowtime, nowtime))
+                    fileok = True
+                except IOError:
+                    print('Write permission denied on ' + filename + \
+                            '. Try again.')
+
+        else:
+            choice = choice_input(
+                    prompt=filename + ' does not exist. Create it?',
+                    options=['y', 'n'], qopt=quitopt)
+            if choice == 'y':
+                try:
+                    nowtime = time.time()
+                    with open(filename, 'w') as f:
+                        os.utime(filename, (nowtime, nowtime))
+                    fileok = True
+                except IOError:
+                    print('Write permission denied on ' + filename + \
+                            '. Try again.')
+
+    return filename
