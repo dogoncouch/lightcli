@@ -104,7 +104,7 @@ def list_input(prompt='List input - enter each item on a seperate line\n' + \
         return lines
 
 
-def outfile_input(extension=None, quitopt=False):
+def outfile_input(extension=None):
     """Get an output file name as input"""
     
     fileok = False
@@ -120,7 +120,7 @@ def outfile_input(extension=None, quitopt=False):
         if os.path.isfile(filename):
             choice = choice_input(prompt=filename + \
                     ' already exists. Overwrite?',
-                    options=['y', 'n'], qopt=quitopt)
+                    options=['y', 'n'])
             if choice == 'y':
                 try:
                     nowtime = time.time()
@@ -134,7 +134,7 @@ def outfile_input(extension=None, quitopt=False):
         else:
             choice = choice_input(
                     prompt=filename + ' does not exist. Create it?',
-                    options=['y', 'n'], qopt=quitopt)
+                    options=['y', 'n'])
             if choice == 'y':
                 try:
                     nowtime = time.time()

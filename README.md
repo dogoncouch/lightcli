@@ -50,6 +50,13 @@ Options:
 
 Gets a list of strings as input. Each item is entered on a separate line; entering an EOF on a blank line ends the input (ctrl-D in \*nix, ctrl-Z in Windows).
 
+### lightcli.outfile\_input([extension=\<extension\>])
+
+Options:
+- `` extension `` - sets the file extension
+
+Returns the name of a writeable output file.
+
 
 # Copyright
 MIT License

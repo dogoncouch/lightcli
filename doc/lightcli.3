@@ -20,7 +20,7 @@ Options:
     \fBshowopts\fR - toggles display of options list (default is True).
     \fBqopt\fR - toggles a 'q to quit' option (default is False).
 
-\fBchoicec_input\fR prompts for and returns input from a list of choices.
+\fBchoice_input\fR prompts for and returns input from a list of choices.
 
 \fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
 .br
@@ -35,6 +35,13 @@ Options:
     \fBprompt\fR - text shown when asking for input (a string)
 
 \fBlist_input\fR gets a list of strings as input. Each item is entered on a separate line; entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
+
+\fBlightcli.outfile_input(\fR[extension=\fI<extension>\fR]\fB)\fR
+.br
+Options:
+    \fBextension\fR - sets the file extension
+
+\fBoutfile_input\fR returns the name of a writeable output file.
 
 .SH FILES
     /usr/share/doc/lightcli/README.md
