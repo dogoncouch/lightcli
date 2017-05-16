@@ -3,9 +3,11 @@
 lightcli is a Python 3 module for lightweight terminal interaction.
 
 .SH SYNOPSIS
-    \fBimport lightcli
-    \fBlightcli.choice_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
-    \fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]
+    \fBimport lightcli\fR
+    choice = \fBlightcli.choice_input(\fR[options=\fI<options>\fR], [prompt=\fI<prompt>\fR], [qopt={\fITrue\fR|\fIFalse\fR}]\fB)\fR
+    multiline = \fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
+    mylist = \fBlightcli.list_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
+    outputfile = \fBlightcli.outfile_input(\fR[extension=\fI<extension>\fR]\fB)\fR
 
 
 .SH DESCRIPTION

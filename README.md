@@ -19,6 +19,7 @@ See the latest instructions on the [releases page](https://github.com/dogoncouch
     choice = lightcli.choice_input([options=<options>], [prompt=<prompt>], [showopts={True|False}], [qopt={True|False}])
     multiline = lightcli.long_input([prompt=<prompt>])
     mylist = lightcli.list_input([prompt=<prompt>])
+    outputfile = lightcli.outfile_input([extension=<extension>])
 
 ## Description
 lightcli is a Python 3 module for lightweight terminal interaction.

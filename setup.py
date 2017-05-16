@@ -38,6 +38,7 @@ Synopsis
     choice = lightcli.choice_input([options=<options>], [prompt=<prompt>], [showopts={True|False}], [qopt={True|False}])
     multiline = lightcli.long_input([prompt=<prompt>])
     mylist = lightcli.list_input([prompt=<prompt>])
+    outputfile = lightcli.outfile_input([extension=<extension>])
 
 
 Links
@@ -63,7 +64,7 @@ setup(name = 'lightcli', version = str(__version__),
         url = 'https://github.com/dogoncouch/lightcli',
         keywords = ['python-library', 'python3-library', 'input',
             'input-method', 'python-module', 'python3-module', 'cli',
-            'cli-utilities', 'input-validation']
+            'cli-utilities', 'input-validation'],
         py_modules = ['lightcli'],
         data_files = ourdata,
         classifiers = ["Development Status :: 3 :: Alpha",
