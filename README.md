@@ -1,5 +1,5 @@
 # lightcli
-A Python 3 module for lightweight terminal interaction
+A Python 3 library module for lightweight terminal interaction
 
 ## Index
 - [Installing](#installing)

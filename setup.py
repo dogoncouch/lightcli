@@ -26,7 +26,7 @@
 Lightcli
 --------
 
-Lightcli is a Python 3 module for lightweight terminal interaction.
+Lightcli is a Python 3 library module for lightweight terminal interaction.
 
 Synopsis
 ````````
