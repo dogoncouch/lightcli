@@ -37,7 +37,7 @@ Options:
 
 Prompts for and returns input from a list of choices.
 
-### lightcli.long\_input([prompt=\<prompt\>])
+### lightcli.long\_input([prompt=\<prompt\>], [maxlines=\<maxlines\>, maxlength=\<maxlength\>)
 
 Options:
 - `` prompt `` - text shown when asking for input (a string)
@@ -46,7 +46,7 @@ Options:
 
 Gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in \*nix, ctrl-Z in Windows).
 
-### lightcli.list\_input([prompt=\<prompt\>])
+### lightcli.list\_input([prompt=\<prompt\>], [maxitems=\<maxitems\>, maxlength=\<maxlength\>)
 
 Options:
 - `` prompt `` - text shown when asking for input (a string)

@@ -24,7 +24,7 @@ Options:
 
 \fBchoice_input\fR prompts for and returns input from a list of choices.
 
-\fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
+\fBlightcli.long_input(\fR[prompt=\fI<prompt>\fR], [maxlines=\fI<maxlines>\fR], [maxlength=\fI<maxlength>\fR]\fB)\fR
 .br
 Options:
     \fBprompt\fR - text shown when asking for input (a string)
@@ -33,7 +33,7 @@ Options:
 
 \fBlong_input\fR gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in *nix, ctrl-Z in Windows).
 
-\fBlightcli.list_input(\fR[prompt=\fI<prompt>\fR]\fB)\fR
+\fBlightcli.list_input(\fR[prompt=\fI<prompt>\fR], [maxitems=\fI<maxitems>\fR], [maxlength=\fI<maxlength>\fR]\fB)\fR
 .br
 Options:
     \fBprompt\fR - text shown when asking for input (a string)
