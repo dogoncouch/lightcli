@@ -36,12 +36,13 @@ def choice_input(options=[], prompt='Press ENTER to continue.',
     """Get input from a list of choices (q to quit)"""
 
     choice = None
+    if showopts:
+        prompt = prompt + ' ' + str(options)
+    if qopt:
+        prompt = prompt + ' (q to quit)'
+    
     while not choice:
         try:
-            if showopts:
-                prompt = prompt + ' ' + str(options)
-            if qopt:
-                prompt = prompt + ' (q to quit)'
             choice = str(input(prompt + ' '))
         except SyntaxError:
             if options == []:
