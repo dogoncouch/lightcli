@@ -36,8 +36,8 @@ Synopsis
     import lightcli
     
     choice = lightcli.choice_input([options=<options>], [prompt=<prompt>], [showopts={True|False}], [qopt={True|False}])
-    multiline = lightcli.long_input([prompt=<prompt>])
-    mylist = lightcli.list_input([prompt=<prompt>])
+    multiline = lightcli.long_input([prompt=<prompt>], maxlines=<maxlines>, maxlength=<maxlength>)
+    mylist = lightcli.list_input([prompt=<prompt>], maxitems=<maxitems>, maxlength=<maxlength>)
     outputfile = lightcli.outfile_input([extension=<extension>])
 
 

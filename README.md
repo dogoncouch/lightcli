@@ -41,6 +41,8 @@ Prompts for and returns input from a list of choices.
 
 Options:
 - `` prompt `` - text shown when asking for input (a string)
+- `` maxlines `` - sets the maximum number of lines
+- `` maxlength `` - sets the maximum line length
 
 Gets a multi-line string as input. Entering an EOF on a blank line ends the input (ctrl-D in \*nix, ctrl-Z in Windows).
 
@@ -48,6 +50,8 @@ Gets a multi-line string as input. Entering an EOF on a blank line ends the inpu
 
 Options:
 - `` prompt `` - text shown when asking for input (a string)
+- `` maxitems `` - sets the maximum number of items
+- `` maxlength `` - sets the maximum item length
 
 Gets a list of strings as input. Each item is entered on a separate line; entering an EOF on a blank line ends the input (ctrl-D in \*nix, ctrl-Z in Windows).
 
