@@ -33,7 +33,7 @@ __version__ = '0.3-alpha'
 
 def choice_input(options=[], prompt='Press ENTER to continue.', 
         showopts=True, qopt=False):
-    """Ask for input, and check its sanity. (q to quit)"""
+    """Get input from a list of choices (q to quit)"""
 
     choice = None
     while not choice:
@@ -71,15 +71,35 @@ def choice_input(options=[], prompt='Press ENTER to continue.',
 
 def long_input(prompt='Multi-line input\n' + \
         'Enter EOF on a blank line to end ' + \
-        '(ctrl-D in *nix, ctrl-Z in windows)'):
-    """Get multi-line string input"""
+        '(ctrl-D in *nix, ctrl-Z in windows)',
+        maxlines = None, maxlength = None):
+    """Get a multi-line string as input"""
     
     lines = []
     print(prompt)
+    lnum = 1
 
     try:
         while True:
-            lines.append(str(input('')))
+            
+            if maxlines:
+            
+                if lnum > maxlines:
+                    break
+                
+                else:
+                    if maxlength:
+                        lines.append(str(input(''))[:maxlength])
+                    else:
+                        lines.append(str(input('')))
+                    lnum += 1
+            
+            else:
+                if maxlength:
+                    lines.append(str(input(''))[:maxlength])
+                else:
+                    lines.append(str(input('')))
+
     except EOFError:
         pass
     finally:
@@ -89,15 +109,35 @@ def long_input(prompt='Multi-line input\n' + \
 
 def list_input(prompt='List input - enter each item on a seperate line\n' + \
         'Enter EOF on a blank line to end ' + \
-        '(ctrl-D in *nix, ctrl-Z in windows)'):
-    """Get multi-line string input"""
+        '(ctrl-D in *nix, ctrl-Z in windows)',
+        maxitems=None, maxlength=None):
+    """Get a list of strings as input"""
     
     lines = []
     print(prompt)
+    inum = 1
 
     try:
+
         while True:
-            lines.append(str(input('')))
+        
+            if maxitems:
+            
+                if inum > maxitems:
+                    break
+                else:
+                    if maxlength:
+                        lines.append(str(input(''))[:maxlength])
+                    else:
+                        lines.append(str(input('')))
+                    inum += 1
+            
+            else:
+                if maxlength:
+                    lines.append(str(input(''))[:maxlength])
+                else:
+                    lines.append(str(input('')))
+
     except EOFError:
         pass
     finally:
