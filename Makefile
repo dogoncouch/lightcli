@@ -22,10 +22,7 @@
 
 all: install clean
 
-install: python2-install python3-install
-
-python2-install:
-	python setup.py install
+install: python3-install
 
 python3-install:
 	python3 setup.py install

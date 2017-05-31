@@ -27,7 +27,7 @@
 import os
 import time
 
-__version__ = '0.4-beta'
+__version__ = '1.0'
 
 
 
