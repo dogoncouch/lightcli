@@ -25,10 +25,20 @@
 
 
 import os
+import sys
 import time
 
 __version__ = '1.0'
 
+
+
+def string_input(prompt):
+    """Python 3 input()/Python 2 raw_input()"""
+    v = sys.version[0]
+    if v == 3:
+        return input(prompt)
+    else:
+        return raw_input(prompt)
 
 
 def choice_input(options=[], prompt='Press ENTER to continue.', 
@@ -43,7 +53,7 @@ def choice_input(options=[], prompt='Press ENTER to continue.',
     
     while not choice:
         try:
-            choice = str(input(prompt + ' '))
+            choice = string_input(prompt + ' ')
         except SyntaxError:
             if options == []:
                 pass
@@ -52,7 +62,7 @@ def choice_input(options=[], prompt='Press ENTER to continue.',
                 return choice
             elif qopt == True and choice == 'q':
                 choice = None
-                is_sure = input('Are you sure you want to quit? ')
+                is_sure = string_input('Are you sure you want to quit? ')
                 if is_sure in ('Y', 'y', 'yes'):
                     exit('\nThanks for playing. Goodbye.\n')
             elif options == []:
@@ -90,16 +100,16 @@ def long_input(prompt='Multi-line input\n' + \
                 
                 else:
                     if maxlength:
-                        lines.append(str(input(''))[:maxlength])
+                        lines.append(string_input('')[:maxlength])
                     else:
-                        lines.append(str(input('')))
+                        lines.append(string_input(''))
                     lnum += 1
             
             else:
                 if maxlength:
-                    lines.append(str(input(''))[:maxlength])
+                    lines.append(string_input('')[:maxlength])
                 else:
-                    lines.append(str(input('')))
+                    lines.append(string_input(''))
 
     except EOFError:
         pass
@@ -128,16 +138,16 @@ def list_input(prompt='List input - enter each item on a seperate line\n' + \
                     break
                 else:
                     if maxlength:
-                        lines.append(str(input(''))[:maxlength])
+                        lines.append(string_input('')[:maxlength])
                     else:
-                        lines.append(str(input('')))
+                        lines.append(string_input(''))
                     inum += 1
             
             else:
                 if maxlength:
-                    lines.append(str(input(''))[:maxlength])
+                    lines.append(string_input('')[:maxlength])
                 else:
-                    lines.append(str(input('')))
+                    lines.append(string_input(''))
 
     except EOFError:
         pass
@@ -151,7 +161,7 @@ def outfile_input(extension=None):
     fileok = False
     
     while not fileok:
-        filename = str(input('File name? '))
+        filename = string_input('File name? ')
         if extension:
             if not filename.endswith(extension):
                 if extension.startswith('.'):
