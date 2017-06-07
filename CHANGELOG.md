@@ -1,7 +1,7 @@
 # Change log
 Change log for [lightcli](https://github.com/dogoncouch/lightcli)
 
-## [1.1] 2017-06-07
+## [Unreleased]
 ### Added
 - `string_input()` function (Python 2/3 compatibility)
 
