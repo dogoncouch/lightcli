@@ -28,7 +28,7 @@ import os
 import sys
 import time
 
-__version__ = '1.0'
+__version__ = '1.1'
 
 
 
