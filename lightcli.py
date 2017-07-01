@@ -28,11 +28,11 @@ import os
 import sys
 import time
 
-__version__ = '1.0'
+__version__ = '1.1'
 
 
 
-def string_input(prompt):
+def string_input(prompt=''):
     """Python 3 input()/Python 2 raw_input()"""
     v = sys.version[0]
     if v == '3':
