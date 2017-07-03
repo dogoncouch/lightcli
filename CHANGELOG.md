@@ -1,6 +1,10 @@
 # Change log
 Change log for [lightcli](https://github.com/dogoncouch/lightcli)
 
+## [Unreleased]
+### Added
+- Python 2 installation in Makefile
+
 ## [1.1] - 2017-07-01
 ### Added
 - `string_input()` function for Python 2/3 compatibility
