@@ -20,12 +20,21 @@
 #_OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #_SOFTWARE.
 
+ISPYTWO := $(sh -c "python2 --version" dot 2>/dev/null)
+ISPYTHREE := $(sh -c "python3 --version" dot 2>/dev/null)
+
 all: install clean
 
-install: python3-install
-
-python3-install:
+install:
+ifndef ISPYTHREE:
+	@echo Installing for Python 3
 	python3 setup.py install
+endif
+
+ifndef ISPYTWO:
+	@echo Installing for Python 2
+	python2 setup.py install
+endif
 
 clean:
 	rm -rf build dist lightcli.egg-info __pycache__
